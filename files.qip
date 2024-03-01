@@ -1,0 +1,15 @@
+set_global_assignment -name VHDL_FILE ../rc_filter_1o.vhd
+set_global_assignment -name SYSTEMVERILOG_FILE ../sys/rgb2ypbpr.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../zx8x.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../sdram.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../keyboard.sv
+set_global_assignment -name QIP_FILE ../T80/T80.qip
+set_global_assignment -name SYSTEMVERILOG_FILE ../YM2149.sv
+set_global_assignment -name SDC_FILE ../sys/constraints.sdc
+set_global_assignment -name VERILOG_FILE ../sys/sigma_delta_dac.v
+set_global_assignment -name VERILOG_FILE ../sys/scandoubler.v
+set_global_assignment -name VERILOG_FILE ../sys/pll.v
+set_global_assignment -name QIP_FILE ../sys/pll.qip
+set_global_assignment -name VERILOG_FILE ../sys/osd.v
+set_global_assignment -name VERILOG_FILE ../sys/mist_io.v
+

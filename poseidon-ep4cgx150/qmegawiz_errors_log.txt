@@ -1,0 +1,10 @@
+
+
+/mnt/Teradisk/SOMHIC/ZX8X_MiST/poseidon-ep4cgx150/pll.v
+
+Mar 01 08AM:25:54>: Error in CNX file format.
+
+Error messages are listed in file
+/mnt/Teradisk/SOMHIC/ZX8X_MiST/poseidon-ep4cgx150/pll.cnxerr.
+
+Can't create the custom megafunction variation file(s)
