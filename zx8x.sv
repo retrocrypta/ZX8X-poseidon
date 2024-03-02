@@ -35,6 +35,9 @@ module guest_top
 
    output        AUDIO_L,
    output        AUDIO_R,
+   output        I2S_BCK,
+   output        I2S_LRCK,
+   output        I2S_DATA,
 
 	input         UART_RX,
 
@@ -405,6 +408,9 @@ reg ic11,ic18,ic19_1,ic19_2;
 wire csync = vsync & hsync;
 wire vsync = ic11;
 
+
+
+
 always @(posedge clk_sys) begin
 
 	reg old_nM1;
@@ -537,6 +543,10 @@ rc_filter_1o #(
 
 wire [8:0] audio_l = { 1'b0, psg_ch_a } + { 1'b0, psg_ch_c } + { mic_bit, 4'd0 };
 wire [8:0] audio_r = { 1'b0, psg_ch_b } + { 1'b0, psg_ch_c } + { mic_bit, 4'd0 };
+
+
+
+i2s_kyp i2s_kyp(CLOCK_27, { I2S_DATA, I2S_LRCK, I2S_BCK }, {audio_l,audio_l[8:1]}, {audio_r,audio_r[8:1]}); // clock should be 50 MHz
 
 sigma_delta_dac #(7) dac_l
 (
